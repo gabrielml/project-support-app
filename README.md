@@ -28,7 +28,22 @@ which would likely caused over-engineering.
 The relationships between these entities were mapped out using three standard diagramming techniques to ensure **conceptual**,
 **logical**, and **physical** clarity:
 
-* UML //TODO
+
+* **[UML Class Diagram](https://drive.google.com/file/d/1ODXg0HTggSDxivPcBdUDmPM8onAAww1D/view?usp=sharing)**: Defined
+  the Object-Oriented structure of the application's _Model Layer_, specifying attributes, methods, and the crucial
+  **"has-a"** relationship between a `Supportrequest` and its `QueryTopic`
+
+![2-uml-class-diagram-v1](img/2-V1-PITSA-UML_Class_Diagram.drawio-min.png)
+
+This model adds more detail to the conceptual model. It represents the **"how"** of a system from a design perspective,
+independent of a specific programming language or database.
+
+An analogy might be a detailed architectural **blueprint** (plan) of a building, showing the rooms, their functions, and how they connect,
+but not the specific materials to be used.
+
+The primary audience for a UML class diagram is the **development team** (i.e., Software Engineers, Developers, Architects,
+Q/A Testers, Project Managers, and Technical Writers). It is a key artifact for anyone who needs a deep,
+technical understanding of the application's core structure.
 * Chen ERD //TODO
 * Crow's Feet ERD // TODO
 
