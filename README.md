@@ -28,10 +28,25 @@ which would likely caused over-engineering.
 The relationships between these entities were mapped out using three standard diagramming techniques to ensure **conceptual**,
 **logical**, and **physical** clarity:
 
+#### [Chen ERD (Entity-Relationship Diagram)](https://drive.google.com/file/d/18vB-oB9NdWm-C_YKqap70lsHZ8YoMXLD/view?usp=sharing)
 
-* **[UML Class Diagram](https://drive.google.com/file/d/1ODXg0HTggSDxivPcBdUDmPM8onAAww1D/view?usp=sharing)**: Defined
-  the Object-Oriented structure of the application's _Model Layer_, specifying attributes, methods, and the crucial
-  **"has-a"** relationship between a `Supportrequest` and its `QueryTopic`
+Modeled the _conceptual data structure_, confirming the **one-to-many** relationship (1:N) where one `QueryTopic` can
+be associated with many `SupportRequests`.
+
+![3-chen-er-diagram](img/3-PITSA-Chen_ER_Diagram.drawio-min.png)
+
+This is the highest-level of a system. It focuses on the main concepts and relationships, in some cases without detailing
+specific attributes or data types. It represents the  **"what"** of a system.
+
+An analogy might be a "brainstorming whiteboard sketch" showing the main ideas.
+
+Its target audience is business stakeholders & analyst who want to understand the basic structure and requirements of the
+system.
+
+#### [UML Class Diagram](https://drive.google.com/file/d/1ODXg0HTggSDxivPcBdUDmPM8onAAww1D/view?usp=sharing)
+
+Defined the Object-Oriented structure of the application's _Model Layer_, specifying attributes, methods, and the crucial
+**"has-a"** relationship between a `Supportrequest` and its `QueryTopic`
 
 ![2-uml-class-diagram-v1](img/2-V1-PITSA-UML_Class_Diagram.drawio-min.png)
 
@@ -39,13 +54,25 @@ This model adds more detail to the conceptual model. It represents the **"how"**
 independent of a specific programming language or database.
 
 An analogy might be a detailed architectural **blueprint** (plan) of a building, showing the rooms, their functions, and how they connect,
-but not the specific materials to be used.
+but not specifying the amount of materials that will be needed.
 
 The primary audience for a UML class diagram is the **development team** (i.e., Software Engineers, Developers, Architects,
 Q/A Testers, Project Managers, and Technical Writers). It is a key artifact for anyone who needs a deep,
 technical understanding of the application's core structure.
-* Chen ERD //TODO
-* Crow's Feet ERD // TODO
+
+#### [Crow's Feet Notation Diagram](https://drive.google.com/file/d/173GMb_QLUh5cmJ02SGvG0cTyiuUlkDQD/view?usp=sharing)
+
+The physical schema of the database was detailed, although it still presented an abstract view because it was independent
+of the specific technology. Table names, column data types, constraints (`NOT NULL`, `UNIQUE`), and the _foreign key_ relationship
+that guarantees _data integrity_ at the database level were specified.
+
+![4-crows-feet-diagram](img/4-PITSA-Crows_Feet_Diagram.drawio-min.png)
+
+An analogy might be a construction plan detailing the exact type of wood, steel, and concrete to be used for each part of
+the building.
+
+Its target audience is database designers, who use it to model data and its relationships at the physical level for a 
+specific [database management system (DBMS)](https://en.wikipedia.org/wiki/Database#Database_management_system)
 
 ### Phase 2: Project Setup & Agile Planning
 
